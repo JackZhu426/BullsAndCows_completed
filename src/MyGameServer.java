@@ -33,10 +33,27 @@ public class MyGameServer
                         {
                             int guesses = 0;
                             boolean guessed = false;
+
+                            // welcomeHint
+                            out.println("--------------------");
+                            out.println("Welcome to Bull & Cow Number Guessing Game");
+                            out.println("Type any of the following options: ");
+                            out.println("HELP");
+                            out.println("NEWGAME");
+                            out.println("RESUME");
+                            out.println("--------------------");
+
                             // optionHint
-                            out.println("Type any of the following options (FROM SERVER): ");
+                            out.println("Type any of the options above (FROM SERVER): ");
                             String option = in.readLine();
-                            if ("NEWGAME".equalsIgnoreCase(option))
+
+                            if ("HELP".equalsIgnoreCase(option))
+                            {
+                                out.println("Create a four digit random number from the digits   1   to   9,   without duplication.");
+                                out.println("1. The player wins if the guess is the same as the randomly chosen number, and the program ends.");
+                                out.println("2. A score of one bull is accumulated for each digit in the guess that equals the corresponding digit in the randomly chosen initial number.");
+                                out.println("3. A score of one cow is accumulated for each digit in the guess that also appears in the randomly chosen number, but in the wrong position.");
+                            } else if ("NEWGAME".equalsIgnoreCase(option))
                             {
                                 // inputNameHint
                                 out.println("PLEASE GIVE YOUR NAME: ");

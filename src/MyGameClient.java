@@ -19,6 +19,16 @@ public class MyGameClient
             boolean guessed = false;
             int guesses = 0;
 
+            // welcomeHint
+            System.out.println(in.readLine());
+            System.out.println(in.readLine());
+            System.out.println(in.readLine());
+            System.out.println(in.readLine());
+            System.out.println(in.readLine());
+            System.out.println(in.readLine());
+            System.out.println(in.readLine());
+
+            // optionHint
             String optionHint = in.readLine();
             System.out.print(optionHint);
 
@@ -26,10 +36,21 @@ public class MyGameClient
             // option
             out.println(option);
 
+
+            /**
+             * [ HELP ]
+             */
+            if ("HELP".equalsIgnoreCase(option))
+            {
+                System.out.println(in.readLine());
+                System.out.println(in.readLine());
+                System.out.println(in.readLine());
+                System.out.println(in.readLine());
+            }
             /**
              * [ NEW_GAME ]
              */
-            if ("NEWGAME".equalsIgnoreCase(option))
+            else if ("NEWGAME".equalsIgnoreCase(option))
             {
                 String inputNameHint = in.readLine();
                 System.out.print(inputNameHint);
